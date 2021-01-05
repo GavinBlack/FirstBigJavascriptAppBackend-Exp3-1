@@ -89,8 +89,7 @@
       </div>
       
       <div class="column" id="user-list">
-        <h3 id="user-typing-status"></h3>
-
+        
         <!-- User Cards -->
         <div class="box">
           <article class="media">
@@ -253,7 +252,6 @@
       });
 
       socket.on('user-typing', function(jsonData){      
-        $('#user-typing-status').text(jsonData.socketId);
 
         // Update user card
         let userCard = $(`.box[data-socket-id="${jsonData.socketId}"]`);
