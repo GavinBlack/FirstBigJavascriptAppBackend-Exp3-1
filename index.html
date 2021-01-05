@@ -114,7 +114,11 @@
 </div>
 
 	<script>
-		var DATA_COUNT = 6;
+    /* 
+    Variable Delcarations
+    */
+
+    var DATA_COUNT = 6;
 		var data = {
 			labels: ['user1'],
 			datasets: [{
@@ -160,6 +164,11 @@
 			options: options
 		});
 
+    /*
+      Function delcarations
+    */
+
+    //Adds a dataset to the chart
 		function addDataset() {
 			chart.data.datasets.push({
 				data: [Math.random()*10+1,Math.random()*10+1,Math.random()*10+1,Math.random()*10+1,Math.random()*10+1,Math.random()*10+1]
@@ -167,19 +176,20 @@
 			chart.update();
 		}
 
+    //Removes a dataset from the chart
 		function removeDataset() {
 			chart.data.datasets.shift();
 			chart.update();
 		}
 
+    //Randomizes the chart's bars
     function randomize() {
         chart.data.datasets[0] = {"data":[Math.random() * 10 + 1]};
         chart.update();
     }
-
 	</script>
 
-   <!-- Socket.IO hookup -->
+  <!-- Socket.IO hookup -->
   <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   
