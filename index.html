@@ -19,7 +19,7 @@
           Chat Server
         </h1>
         <p class="subtitle">
-          There are <strong id="people-connected">0</strong> people connected!
+          <strong id="people-connected">0</strong> <span id="grammar">people</span> connected
         </p>
       </div>
     </section>
@@ -268,7 +268,14 @@
         
         // Update Count of Connection on the Site
         console.log(count);
-        $('#people-connected').text(count);
+        if(count == 1) {
+          $('#grammar').text("person");
+          $('#people-connected').text(count);
+        }
+        else {
+          $('#grammar').text("people");
+          $('#people-connected').text(count);
+        }
       });
 
       socket.on('connect-user', function(jsonData){
