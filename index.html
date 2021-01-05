@@ -39,14 +39,14 @@
           <div class="field">
             <label class="label">Name</label>
             <div class="control">
-              <input id="form-user-full-name" class="input" type="text" placeholder="Text input">
+              <input id="form-user-full-name" class="input" type="text" placeholder="Name">
             </div>
           </div>
 
           <div class="field">
             <label class="label">Username</label>
             <div class="control has-icons-left has-icons-right">
-              <input id="form-user-short-name" class="input is-success" type="text" placeholder="Text input" value="bulma">
+              <input id="form-user-short-name" class="input is-success" type="text" placeholder="Username">
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
@@ -60,7 +60,7 @@
           <div class="field">
             <label class="label">Message</label>
             <div class="control">
-              <textarea id="form-user-message" class="textarea" placeholder="Textarea"></textarea>
+              <textarea id="form-user-message" class="textarea" placeholder="Message"></textarea>
             </div>
           </div>
 
@@ -202,7 +202,7 @@
         
         // Get form values
         let userFullName = $('#form-user-full-name').val();
-        let userShortName = $('#form-user-short-name').val();
+        let userShortName = '@' + $('#form-user-short-name').val();
         let userMessage = $('#form-user-message').val();
         let userFavoriteNumber = $('#form-user-favorite-number').val();
         let userFavoriteColor = $('#form-user-favorite-color').val();
