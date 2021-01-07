@@ -91,7 +91,7 @@
       <div class="column" id="user-list">
         
         <!-- User Cards -->
-        <div class="box">
+        <div class="box" id="box">
           <article class="media">
             <div class="media-left">
               <figure id="card-user-favorite-color-1" class="image is-64x64"></figure>
@@ -111,9 +111,16 @@
         </div>
       </div>
 </div>
-	<script>
-
+  
+  <style>
+    body
+    {
+      background-color:beige;
+    }
+  </style>
+  <script>
     //Variable Delcarations
+
     var DATA_COUNT = 6;
 		var data = {
 			labels: ['user1'],
@@ -223,7 +230,7 @@
       });
 
       socket.on('user-update', function(jsonData) {
-      
+
         // Update user card
         let userCard = $(`.box[data-socket-id="${jsonData.socketId}"]`);
         
@@ -302,6 +309,7 @@
         socket.emit('user-typing', { "socketId": socket.id });
       });
     });
+
   </script>
   <script src="./eventhandlers.js"></script>
   </body>
